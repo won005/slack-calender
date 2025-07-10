@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Slack tokens
+application-local.yml
