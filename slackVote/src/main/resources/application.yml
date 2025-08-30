@@ -1,3 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    console:
+      enabled: true  # http://localhost:8080/h2-console ?? ??
+
+# 로깅 설정 추가
+logging:
+  level:
+    com.example.slackVote: DEBUG  # 우리 앱은 DEBUG 레벨
+    com.slack.api: INFO           # 슬랙 API는 INFO 레벨
+    org.springframework: WARN     # Spring은 WARN 레벨
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
 slack:
-  bot-token: dummy-token
-  signing-secret: dummy-secret
+  bot-token: xoxb-9088971357235-9171182841142-Ifa9ga07XP8nuzdIbG84vohc
+  signing-secret: 66429f91edeeafa2c3cfa7e3102f2d91
